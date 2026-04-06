@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет тестирования ИИ-ассистента ОГЭ Математика</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .metric { display: inline-block; margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        .good { color: green; font-size: 32px; font-weight: bold; }
+        .container { display: flex; flex-wrap: wrap; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        .correct { background-color: #d4edda; }
+        .incorrect { background-color: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>Отчет тестирования ИИ-ассистента для ОГЭ по математике</h1>
+    <h2>Модель: Qwen2.5-3B-Instruct (3B параметров)</h2>
+    
+    <div class="container">
+        <div class="metric">
+            <h3>Точность</h3>
+            <div class="good">88.3%</div>
+            <div>(53/60 задач)</div>
+        </div>
+        <div class="metric">
+            <h3>Среднее время</h3>
+            <div class="good">38.4 сек</div>
+            <div>на задачу</div>
+        </div>
+        <div class="metric">
+            <h3>Размер модели</h3>
+            <div class="good">2.0 GB</div>
+            <div>в 4-bit квантовании</div>
+        </div>
+    </div>
+    
+    <h3>Результаты по темам</h3>
+    <ul>
+<li><b>Уравнения:</b> <span style="color:green">93.3%</span> (14/15)</li><li><b>Проценты:</b> <span style="color:green">100.0%</span> (10/10)</li><li><b>Неравенства:</b> <span style="color:green">80.0%</span> (8/10)</li><li><b>Системы:</b> <span style="color:green">80.0%</span> (8/10)</li><li><b>Вероятность:</b> <span style="color:green">85.7%</span> (6/7)</li><li><b>Прогрессии:</b> <span style="color:green">80.0%</span> (4/5)</li><li><b>Функции:</b> <span style="color:green">100.0%</span> (3/3)</li>
+    </ul>
+    
+    <h3>Детальные результаты (первые 20 задач)</h3>
+    <table>
+        <thead>
+            <tr><th>№</th><th>Тема</th><th>Задача</th><th>Ответ ИИ</th><th>Правильный</th><th>Результат</th></tr>
+        </thead>
+        <tbody>
+<tr class="correct"><td>1</td><td>Уравнения</td><td>Решите уравнение 3x - 7 = 14...</td><td>7</td><td>7</td><td>✅</td></tr><tr class="correct"><td>2</td><td>Уравнения</td><td>Решите уравнение 5x + 2 = 3x - 8...</td><td>-5</td><td>-5</td><td>✅</td></tr><tr class="correct"><td>3</td><td>Уравнения</td><td>Решите уравнение 2(3x - 4) = 10...</td><td>3</td><td>3</td><td>✅</td></tr><tr class="correct"><td>4</td><td>Уравнения</td><td>Решите уравнение x² - 5x + 6 = 0 (в ответе укажите...</td><td>2</td><td>2</td><td>✅</td></tr><tr class="correct"><td>5</td><td>Уравнения</td><td>Решите уравнение x² - 9 = 0 (в ответе укажите поло...</td><td>3</td><td>3</td><td>✅</td></tr><tr class="correct"><td>6</td><td>Уравнения</td><td>Решите уравнение 4x² - 4x + 1 = 0...</td><td>0.5</td><td>0.5</td><td>✅</td></tr><tr class="correct"><td>7</td><td>Уравнения</td><td>Решите уравнение (x-3)(x+5) = 0 (в ответе укажите ...</td><td>-2</td><td>-2</td><td>✅</td></tr><tr class="correct"><td>8</td><td>Уравнения</td><td>Решите уравнение 2x² - 8 = 0 (в ответе укажите пол...</td><td>2</td><td>2</td><td>✅</td></tr><tr class="correct"><td>9</td><td>Уравнения</td><td>Решите уравнение x/3 + x/4 = 7...</td><td>12</td><td>12</td><td>✅</td></tr><tr class="correct"><td>10</td><td>Уравнения</td><td>Решите уравнение 2x - 5 = x + 3...</td><td>8</td><td>8</td><td>✅</td></tr><tr class="correct"><td>11</td><td>Уравнения</td><td>Решите уравнение (x+2)/3 = (x-1)/2...</td><td>7</td><td>7</td><td>✅</td></tr><tr class="incorrect"><td>12</td><td>Уравнения</td><td>Решите уравнение 0.5x + 3 = 2x - 1...</td><td>3</td><td>2.67</td><td>❌</td></tr><tr class="correct"><td>13</td><td>Уравнения</td><td>Решите уравнение x³ - x = 0 (в ответе укажите поло...</td><td>1</td><td>1</td><td>✅</td></tr><tr class="correct"><td>14</td><td>Уравнения</td><td>Решите уравнение |x - 2| = 5 (в ответе укажите бол...</td><td>7</td><td>7</td><td>✅</td></tr><tr class="correct"><td>15</td><td>Уравнения</td><td>Решите уравнение √(x+1) = 3...</td><td>8</td><td>8</td><td>✅</td></tr><tr class="correct"><td>16</td><td>Проценты</td><td>Найдите 15% от числа 200...</td><td>30</td><td>30</td><td>✅</td></tr><tr class="correct"><td>17</td><td>Проценты</td><td>Число увеличили на 20% и получили 120. Найдите исх...</td><td>100</td><td>100</td><td>✅</td></tr><tr class="correct"><td>18</td><td>Проценты</td><td>Цена товара снизилась с 500 до 400 рублей. На скол...</td><td>20</td><td>20</td><td>✅</td></tr><tr class="correct"><td>19</td><td>Проценты</td><td>Вкладчик положил в банк 10000 рублей под 10% годов...</td><td>11000</td><td>11000</td><td>✅</td></tr><tr class="correct"><td>20</td><td>Проценты</td><td>Найдите число, если 30% его равны 90...</td><td>300</td><td>300</td><td>✅</td></tr>
+        </tbody>
+    </table>
+    
+    <h3>Вывод</h3>
+    <p>Модель Qwen2.5-3B-Instruct показывает <b>точность 88.3%</b> на контрольной выборке из 60 задач ОГЭ по математике.</p>
+    <p>Модель <b>пригодна для использования</b> в качестве ИИ-ассистента для подготовки к ОГЭ. Рекомендуется дообучение на специфических задачах для повышения точности.</p>
+    
+    <hr>
+    <p><i>Дата тестирования: 2026-04-06</i></p>
+</body>
+</html>
